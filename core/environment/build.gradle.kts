@@ -1,12 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt.android)
-    kotlin("kapt")
 }
 
 android {
-    namespace = "com.bye.ane.core.network"
+    namespace = "com.bye.ane.core.environment"
     compileSdk = 34
 
     defaultConfig {
@@ -35,10 +33,11 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-    implementation(libs.bundles.okhttp.combine)
-    implementation(libs.bundles.retrofit.combine)
-    implementation(project(":core:environment"))
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
