@@ -21,4 +21,13 @@ dependencyResolutionManagement {
 
 rootProject.name = "FakeAndroidTemplate"
 include(":app")
- 
+//--------------------------------------------------------------------------------------------------
+include(":core:global")
+include(":core:network")
+//--------------------------------------------------------------------------------------------------
+include(":shared:mvi")
+//--------------------------------------------------------------------------------------------------
+include(":feature:index")
+include(":feature:index-port")
+include(":feature:login")
+include(":feature:login-port")
