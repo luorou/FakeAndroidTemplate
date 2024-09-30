@@ -1,16 +1,19 @@
 package com.bye.ane.faker.startup.task
 
-import android.util.Log
+import android.app.Application
+import com.bye.ane.shared.store.LocalStore
 import com.caij.app.startup.Task
 
-class EmptyTask(id: String) : Task() {
+class LocalStoreTask(private val app: Application) : Task() {
 
     companion object {
-        const val TASK_NAME = "task_empty"
+        const val TASK_NAME = "task_name_local_store"
     }
 
+
+
     override fun run() {
-        Log.i("", "")
+        LocalStore.initialize(app)
     }
 
     override fun dependencies(): List<String> {
@@ -20,4 +23,5 @@ class EmptyTask(id: String) : Task() {
     override fun getTaskName(): String {
         return TASK_NAME
     }
+
 }

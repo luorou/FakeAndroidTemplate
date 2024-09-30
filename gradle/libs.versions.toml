@@ -31,6 +31,7 @@ utilcodex = "1.31.1"
 easyview = "1.0.1"
 ultimateBarX = "0.8.1"
 orbit = "9.0.0"
+preference = "1.2.1"
 #--------------------------------------------------------------------------------------------------
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -89,6 +90,8 @@ utilcodex = { module = "com.blankj:utilcodex", version.ref = "utilcodex" }
 easyView = { module = "com.github.liqvip:EasyView", version.ref = "easyview" }
 #---- UltimateBarX
 ultimateBarX = { module = "com.gitee.zackratos:UltimateBarX", version.ref = "ultimateBarX" }
+#---- preference
+preference = { module = "androidx.preference:preference", version.ref = "preference" }
 #----------------------------------------------------------------------------------------------------------
 [bundles]
 androidx-common-combine = [

@@ -14,4 +14,8 @@ object EnvProvider {
     fun domainUrl(): String {
         return ""
     }
+
+    fun initBuildType(type: BuildType) {
+
+    }
 }

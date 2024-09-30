@@ -1,20 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.bye.ane.faker"
+    namespace = "com.bye.ane.shared.store"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.bye.ane.faker"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -33,22 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        buildConfig = true
-    }
 }
 
 dependencies {
-    implementation(libs.bundles.androidx.common.combine)
-
-    implementation(libs.dgappstartup)
-    //
-    implementation(project(":core:environment"))
-    implementation(project(":core:global"))
-    implementation(project(":shared:store"))
-
-    //
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.preference)
+    implementation(libs.mmkv)
 }

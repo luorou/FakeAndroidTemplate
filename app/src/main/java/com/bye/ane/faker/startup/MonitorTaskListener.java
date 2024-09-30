@@ -5,7 +5,7 @@ import android.util.Log;
 import androidx.core.os.TraceCompat;
 
 import com.caij.app.startup.Task;
-import com.caij.app.startup.TaskListener;import com.hekr.core.startup.ThreadManager;
+import com.caij.app.startup.TaskListener;
 
 public  class MonitorTaskListener implements TaskListener {
 
