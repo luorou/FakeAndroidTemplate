@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar_container" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentBottom="true">
+
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            app:tab_item_is_equ_width="true">
+
+            <com.bye.ane.core.widget.tab.DslBottomTabItemView
+                android:id="@+id/tab_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blackModeIconNormal="@mipmap/icon_tab_home"
+                app:blackModeIconSelected="@mipmap/icon_tab_home_selected"
+                app:blackModeTextColorNormal="@color/col_cccccc"
+                app:blackModeTextColorSelected="@color/col_ffffff"
+                app:iconNormal="@mipmap/icon_tab_home"
+                app:iconSelected="@mipmap/icon_tab_home_selected"
+                app:itemText="@string/text_tab_home"
+                app:itemTextSize="10sp"
+                app:textColorNormal="@color/col_bbbbbb"
+                app:textColorSelected="@color/col_d32e20" />
+
+            <com.bye.ane.core.widget.tab.DslBottomTabItemView
+                android:id="@+id/tab_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blackModeIconNormal="@mipmap/icon_tab_mall"
+                app:blackModeIconSelected="@mipmap/icon_tab_mall_selected"
+                app:blackModeTextColorNormal="@color/col_cccccc"
+                app:blackModeTextColorSelected="@color/col_d32e20"
+                app:iconNormal="@mipmap/icon_tab_mall"
+                app:iconSelected="@mipmap/icon_tab_mall_selected"
+                app:itemText="@string/text_tab_video"
+                app:itemTextSize="10sp"
+                app:textColorNormal="@color/col_bbbbbb"
+                app:textColorSelected="@color/col_d32e20" />
+
+            <com.bye.ane.core.widget.tab.DslBottomTabItemView
+                android:id="@+id/tab_mall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blackModeIconNormal="@mipmap/icon_tab_trade"
+                app:blackModeIconSelected="@mipmap/icon_tab_trade_selected"
+                app:blackModeTextColorNormal="@color/col_cccccc"
+                app:blackModeTextColorSelected="@color/col_ffffff"
+                app:iconNormal="@mipmap/icon_tab_trade"
+                app:iconSelected="@mipmap/icon_tab_trade_selected"
+                app:itemText="@string/text_tab_shop"
+                app:itemTextSize="10sp"
+                app:textColorNormal="@color/col_bbbbbb"
+                app:textColorSelected="@color/col_d32e20" />
+
+            <com.bye.ane.core.widget.tab.DslBottomTabItemView
+                android:id="@+id/tab_mine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blackModeIconNormal="@mipmap/icon_tab_user"
+                app:blackModeIconSelected="@mipmap/icon_tab_user_selected"
+                app:blackModeTextColorNormal="@color/col_cccccc"
+                app:blackModeTextColorSelected="@color/col_ffffff"
+                app:iconNormal="@mipmap/icon_tab_user"
+                app:iconSelected="@mipmap/icon_tab_user_selected"
+                app:itemText="@string/text_tab_mine"
+                app:itemTextSize="10sp"
+                app:textColorNormal="@color/col_bbbbbb"
+                app:textColorSelected="@color/col_d32e20" />
+        </com.angcyo.tablayout.DslTabLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,4 +1,11 @@
 [versions]
+compile-sdk = "34"
+min-sdk = "21"
+target-sdk = "34"
+version-code = "1"
+version-name = "1.0.0"
+application-id = "com.bye.ane.faker"
+#--------------------------------------------------------------------------------------------------
 agp = "8.6.1"
 kotlin = "1.9.0"
 core-ktx = "1.13.1"
@@ -26,12 +33,13 @@ lifecycle-livedata-ktx = "2.8.6"
 lifecycle-viewmodel-ktx = "2.8.6"
 lifecycle-extensions = "2.2.0"
 activity-ktx = "1.9.2"
-fragment-ktx = "1.8.3"
+fragment-ktx = "1.8.4"
 utilcodex = "1.31.1"
 easyview = "1.0.1"
 ultimateBarX = "0.8.1"
 orbit = "9.0.0"
 preference = "1.2.1"
+dsl-tab-layout = "3.5.5"
 #--------------------------------------------------------------------------------------------------
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -84,6 +92,9 @@ lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", ver
 #---- page ktx
 activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity-ktx" }
 fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment-ktx" }
+#---- dslTabLayout
+dsl-tabLayout = { module = "com.github.angcyo.DslTablayout:TabLayout", version.ref = "dsl-tab-layout" }
+dsl-viewpager2-delegate = { module = "com.github.angcyo.DslTablayout:ViewPager2Delegate", version.ref = "dsl-tab-layout" }
 #---- utilcode
 utilcodex = { module = "com.blankj:utilcodex", version.ref = "utilcodex" }
 #---- easyView
@@ -139,6 +150,10 @@ lifecycle-ktx-combine = [
 page-slice-ktx-combine = [
     "activity-ktx",
     "fragment-ktx"
+]
+dsl-tablayout-combine = [
+    "dsl-tabLayout",
+    "dsl-viewpager2-delegate"
 ]
 
 [plugins]

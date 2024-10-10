@@ -2,6 +2,7 @@ package com.bye.ane.core.environment
 
 object EnvProvider {
     private val envType: EnvType = EnvType.DEBUG
+    //
     private val buildType: BuildType = BuildType.DEBUG
 
 
