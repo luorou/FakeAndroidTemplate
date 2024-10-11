@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt.android)
+    kotlin("kapt")
 }
 
 android {
@@ -18,9 +20,9 @@ android {
     signingConfigs {
         create("keyStore") {
             keyAlias = "fake"
-            keyPassword = "fake"
+            keyPassword = "fake1234"
             storeFile = file("../fake.jks")
-            storePassword = "fake"
+            storePassword = "fake1234"
         }
     }
     //
@@ -55,18 +57,25 @@ android {
     buildFeatures {
         buildConfig = true
     }
+    hilt{
+        enableAggregatingTask = true
+    }
 }
 
 dependencies {
     implementation(libs.bundles.androidx.common.combine)
-
     implementation(libs.dgappstartup)
+    //
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
     //
     implementation(project(":core:environment"))
     implementation(project(":core:global"))
     implementation(project(":shared:store"))
     //
     implementation(project(":feature:index"))
+    implementation(project(":feature:login"))
+    implementation(project(":feature:market"))
     //
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

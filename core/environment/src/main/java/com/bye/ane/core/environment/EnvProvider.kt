@@ -13,7 +13,7 @@ object EnvProvider {
 
     @Synchronized
     fun domainUrl(): String {
-        return ""
+        return "https://google.cn"
     }
 
     fun initBuildType(type: BuildType) {

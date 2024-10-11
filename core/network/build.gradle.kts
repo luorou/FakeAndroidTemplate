@@ -38,7 +38,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-    implementation(libs.bundles.okhttp.combine)
-    implementation(libs.bundles.retrofit.combine)
+    api(libs.bundles.okhttp.combine)
+    api(libs.bundles.retrofit.combine)
     implementation(project(":core:environment"))
 }

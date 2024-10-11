@@ -19,7 +19,9 @@ import com.bye.ane.feature.index.present.contract.IndexState
 import com.bye.ane.feature.index.present.ui.vp.IndexVpAdapter
 import com.bye.ane.feature.index.present.vm.IndexVM
 import com.bye.ane.shared.mvi.ui.activity.OrbitMviActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class IndexActivity : OrbitMviActivity<
         IndexState,
         IndexEffect,
@@ -54,6 +56,7 @@ class IndexActivity : OrbitMviActivity<
     private fun initView() {
 
         buildSlice()
+        VM.login()
     }
 
     /**

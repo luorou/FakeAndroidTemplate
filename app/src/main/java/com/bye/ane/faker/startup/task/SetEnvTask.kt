@@ -18,7 +18,6 @@ class SetEnvTask(private val app: Application, private val buildType: String) : 
     override fun run() {
         //
         val localType = LocalStore.get(app,StoreTypes.MMKV).getString(LocalStoreKeys.STORE_KEY_BUILD_TYPE)
-        Log.e("TAG---", localType + "")
         //
         if (localType.isNullOrEmpty()) {
             val type = getBuildTypeByKey(buildType)
