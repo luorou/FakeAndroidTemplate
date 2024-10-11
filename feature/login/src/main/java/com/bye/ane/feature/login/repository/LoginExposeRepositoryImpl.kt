@@ -9,6 +9,6 @@ import javax.inject.Singleton
 class LoginExposeRepositoryImpl @Inject constructor(private val api: LoginApi) :
     LoginExposeRepository {
     override fun login(): String {
-        return "api.login()"
+        return "api.login() LoginExposeRepository"
     }
 }

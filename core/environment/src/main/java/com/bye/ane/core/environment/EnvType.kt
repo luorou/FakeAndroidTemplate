@@ -26,3 +26,23 @@ fun getEnvTypeByKey(name: String): EnvType {
         }
     }
 }
+
+fun getEnvTypeByBuildTypeKey(name:String): EnvType {
+    return when (name) {
+        BuildType.DEBUG.name -> {
+            EnvType.DEBUG
+        }
+
+        BuildType.STAGING.name -> {
+            EnvType.STAGING
+        }
+
+        BuildType.RELEASE.name -> {
+            EnvType.RELEASE
+        }
+
+        else -> {
+            EnvType.RELEASE
+        }
+    }
+}
