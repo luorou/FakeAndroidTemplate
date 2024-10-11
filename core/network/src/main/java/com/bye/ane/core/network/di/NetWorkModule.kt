@@ -39,7 +39,7 @@ object NetWorkModule {
     @Named("loggingInterceptor")
     fun loggingInterceptor(): Interceptor =
         AndroidLoggingInterceptor.build(
-            isDebug = true,
+            isDebug = !EnvProvider.isRelease(),
             hideVerticalLine = true
         )
 

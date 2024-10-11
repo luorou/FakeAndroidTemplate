@@ -40,5 +40,7 @@ dependencies {
     kapt(libs.hilt.compiler)
     api(libs.bundles.okhttp.combine)
     api(libs.bundles.retrofit.combine)
+    implementation(libs.utilcodex)
     implementation(project(":core:environment"))
+    implementation(project(":core:global"))
 }

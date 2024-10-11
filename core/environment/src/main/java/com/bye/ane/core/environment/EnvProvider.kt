@@ -6,17 +6,17 @@ import com.bye.ane.shared.store.StoreTypes
 
 object EnvProvider {
     //
-    private var envType: EnvType = EnvType.DEBUG
+    private var envType: EnvType = EnvType.RELEASE
 
     //
-    private var buildType: BuildType = BuildType.DEBUG
+    private var buildType: BuildType = BuildType.RELEASE
 
     /**
      *
      */
     @Synchronized
     fun isRelease(): Boolean {
-        return buildType == BuildType.DEBUG
+        return buildType == BuildType.RELEASE
     }
 
     /**
