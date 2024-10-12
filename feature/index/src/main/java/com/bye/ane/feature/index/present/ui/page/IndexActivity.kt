@@ -13,12 +13,16 @@ import androidx.viewpager2.widget.ViewPager2
 import com.angcyo.tablayout.delegate2.ViewPager2Delegate
 import com.bye.ane.core.widget.tab.ColorMode
 import com.bye.ane.core.widget.tab.DslBottomTabItemView
+import com.bye.ane.feature.index.R
 import com.bye.ane.feature.index.databinding.IndexActivityBinding
 import com.bye.ane.feature.index.present.contract.IndexEffect
 import com.bye.ane.feature.index.present.contract.IndexState
 import com.bye.ane.feature.index.present.ui.vp.IndexVpAdapter
 import com.bye.ane.feature.index.present.vm.IndexVM
 import com.bye.ane.shared.mvi.ui.activity.OrbitMviActivity
+import com.example.xlulibrary.Location
+import com.example.xlulibrary.ToastBox
+import com.example.xlulibrary.ToastTextStyle
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

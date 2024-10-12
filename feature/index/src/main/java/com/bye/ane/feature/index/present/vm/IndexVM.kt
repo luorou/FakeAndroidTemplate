@@ -21,7 +21,7 @@ class IndexVM @Inject constructor(
 
     //
     fun login() = intent {
-        val name = loginExposeRepository.login()
-        Log.e("login", name)
+        val name = indexRepository.login()
+        Log.e("login", "name")
     }
 }

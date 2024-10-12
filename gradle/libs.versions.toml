@@ -2,11 +2,12 @@
 compile-sdk = "34"
 min-sdk = "21"
 target-sdk = "34"
+toastbox = "0.7.4"
 version-code = "1"
 version-name = "1.0.0"
 application-id = "com.bye.ane.faker"
 #--------------------------------------------------------------------------------------------------
-agp = "8.5.2"
+agp = "8.7.0"
 kotlin = "2.0.0"
 core-ktx = "1.13.1"
 junit = "4.13.2"
@@ -101,6 +102,7 @@ fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragm
 dsl-tabLayout = { module = "com.github.angcyo.DslTablayout:TabLayout", version.ref = "dsl-tab-layout" }
 dsl-viewpager2-delegate = { module = "com.github.angcyo.DslTablayout:ViewPager2Delegate", version.ref = "dsl-tab-layout" }
 #---- utilcode
+toastbox = { module = "com.github.xluu233:ToastBox", version.ref = "toastbox" }
 utilcodex = { module = "com.blankj:utilcodex", version.ref = "utilcodex" }
 #---- easyView
 easyView = { module = "com.github.liqvip:EasyView", version.ref = "easyview" }

@@ -1,12 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt.android)
-    kotlin("kapt")
 }
 
 android {
-    namespace = "com.bye.ane.feature.index"
+    namespace = "com.bye.ane.core.cheaps"
     compileSdk = libs.versions.compile.sdk.get().toInt()
 
     defaultConfig {
@@ -32,31 +30,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
-    hilt{
-        enableAggregatingTask = true
-    }
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-    implementation(libs.bundles.dsl.tablayout.combine)
-    implementation(libs.bundles.page.slice.ktx.combine)
+    implementation(project(":core:global"))
     implementation (libs.toastbox)
     //
-    implementation(project(":core:global"))
-    implementation(project(":core:network"))
-    implementation(project(":core:cheaps"))
-    implementation(project(":core:resources"))
-    implementation(project(":core:widget"))
-    implementation(project(":shared:mvi"))
-    implementation(project(":feature:login-port"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
