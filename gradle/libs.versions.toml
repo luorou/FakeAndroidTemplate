@@ -1,6 +1,6 @@
 [versions]
 compile-sdk = "34"
-min-sdk = "21"
+min-sdk = "24"
 target-sdk = "34"
 toastbox = "0.7.4"
 version-code = "1"
@@ -43,11 +43,13 @@ ultimateBarX = "0.8.1"
 orbit = "9.0.0"
 preference = "1.2.1"
 dsl-tab-layout = "3.5.5"
+circular-reveal-switch = "0.4.6"
 #--------------------------------------------------------------------------------------------------
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
+circularrevealswitch = { module = "com.github.YenalyLiew:CircularRevealSwitch", version.ref = "circular-reveal-switch" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }

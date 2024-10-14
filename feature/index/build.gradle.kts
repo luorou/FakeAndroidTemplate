@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.bundles.dsl.tablayout.combine)
     implementation(libs.bundles.page.slice.ktx.combine)
     implementation (libs.toastbox)
+    implementation(libs.circularrevealswitch)
+    implementation(libs.utilcodex)
+    implementation(libs.ultimateBarX)
     //
     implementation(project(":core:global"))
     implementation(project(":core:network"))
