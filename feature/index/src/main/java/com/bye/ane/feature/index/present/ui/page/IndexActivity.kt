@@ -8,11 +8,8 @@ import androidx.activity.viewModels
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.children
-import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.viewpager2.widget.ViewPager2
 import com.angcyo.tablayout.delegate2.ViewPager2Delegate
-import com.blankj.utilcode.util.ScreenUtils
-import com.blankj.utilcode.util.SizeUtils
 import com.bye.ane.core.widget.tab.ColorMode
 import com.bye.ane.core.widget.tab.DslBottomTabItemView
 import com.bye.ane.feature.index.databinding.IndexActivityBinding
@@ -21,9 +18,6 @@ import com.bye.ane.feature.index.present.contract.IndexState
 import com.bye.ane.feature.index.present.ui.vp.IndexVpAdapter
 import com.bye.ane.feature.index.present.vm.IndexVM
 import com.bye.ane.shared.mvi.ui.activity.OrbitMviActivity
-import com.yenaly.circularrevealswitch.SwitchAnimation
-import com.yenaly.circularrevealswitch.ext.setDayNightModeSwitcher
-import com.zackratos.ultimatebarx.ultimatebarx.java.UltimateBarX
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -64,17 +58,7 @@ class IndexActivity : OrbitMviActivity<
         buildSlice()
         VM.login()
 
-        mBind.tv.setDayNightModeSwitcher(
-            duration = 400L,
-            interpolator = FastOutSlowInInterpolator(),
-            animToDayMode = SwitchAnimation.SHRINK, // 前往日间模式的动画
-            animToNightMode = SwitchAnimation.EXPAND, // 前往夜间模式的动画
-            onNightModeAnimStart = { },
-            onNightModeAnimEnd = { },
-            onDayModeAnimStart = { },
-            onDayModeAnimEnd = { },
-            onClick = { },
-        )
+
     }
 
     /**

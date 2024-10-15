@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.android)
     kotlin("kapt")
+    id("com.didi.drouter")
 }
 
 android {
@@ -65,6 +66,7 @@ android {
 dependencies {
     implementation(libs.bundles.androidx.common.combine)
     implementation(libs.dgappstartup)
+    implementation(libs.bundles.drouter.combine)
     //
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)

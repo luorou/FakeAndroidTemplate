@@ -44,12 +44,12 @@ orbit = "9.0.0"
 preference = "1.2.1"
 dsl-tab-layout = "3.5.5"
 circular-reveal-switch = "0.4.6"
+x-rv-divider = "1.0.2"
 #--------------------------------------------------------------------------------------------------
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
-circularrevealswitch = { module = "com.github.YenalyLiew:CircularRevealSwitch", version.ref = "circular-reveal-switch" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -112,6 +112,10 @@ easyView = { module = "com.github.liqvip:EasyView", version.ref = "easyview" }
 ultimateBarX = { module = "com.gitee.zackratos:UltimateBarX", version.ref = "ultimateBarX" }
 #---- preference
 preference = { module = "androidx.preference:preference", version.ref = "preference" }
+#---- XRecyclerViewDivider
+xRvDivider = { module = "com.github.huangxiaolianghh:XRecyclerViewDivider", version.ref = "x-rv-divider" }
+#---- CircularRevealSwitch
+circularrevealswitch = { module = "com.github.YenalyLiew:CircularRevealSwitch", version.ref = "circular-reveal-switch" }
 #----------------------------------------------------------------------------------------------------------
 [bundles]
 androidx-common-combine = [

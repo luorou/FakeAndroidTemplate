@@ -16,8 +16,8 @@ class IndexRepository @Inject constructor(private val api: IndexApi) {
      */
     suspend fun login(): String? {
         val filter = RespFilter.Builder<String>()
-            .addBusinessBlock { showRespToastHandler(it) }
             .addBusinessBlock { reLoginHandler(it) }
+            .addBusinessBlock { showRespToastHandler(it) }
         kotlin.runCatching {
             api.login()
         }.onFailure { e ->
